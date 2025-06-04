@@ -1,0 +1,8 @@
+{
+  "base-sepolia": {
+    "Clocktower": {
+      "address": "0x046aF9a97c223dee4b0ADF65CA10163f08e23309",
+      "startBlock": 22967543
+    }
+  }
+}

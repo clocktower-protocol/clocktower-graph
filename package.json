@@ -1,0 +1,15 @@
+{
+  "name": "clocktower-graph",
+  "version": "1.0.0",
+  "description": "Subgraphs for Clocktower Protocol",
+  "license": "ISC",
+  "author": "Hugo Marx",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.97.1"
+  }
+}
