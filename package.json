@@ -2,8 +2,7 @@
   "name": "clocktower-graph",
   "version": "1.0.0",
   "description": "Subgraphs for Clocktower Protocol",
-  "license": "ISC",
-  "author": "Hugo Marx",
+  "private": true,
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
