@@ -1,0 +1,137 @@
+type CallerLog @entity(immutable: true) {
+  id: Bytes!
+  timestamp: BigInt! # uint40
+  checkedDay: BigInt! # uint40
+  caller: Bytes! # address
+  isFinished: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Coordinates @entity(immutable: true) {
+  id: Bytes!
+  internal_id: Bytes! # bytes32
+  subscriberIndex: BigInt! # uint256
+  subscriptionIndex: BigInt! # uint256
+  frequency: BigInt! # uint256
+  nextUncheckedDay: BigInt! # uint40
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DefaultAdminDelayChangeCanceled @entity(immutable: true) {
+  id: Bytes!
+
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DefaultAdminDelayChangeScheduled @entity(immutable: true) {
+  id: Bytes!
+  newDelay: BigInt! # uint48
+  effectSchedule: BigInt! # uint48
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DefaultAdminTransferCanceled @entity(immutable: true) {
+  id: Bytes!
+
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DefaultAdminTransferScheduled @entity(immutable: true) {
+  id: Bytes!
+  newAdmin: Bytes! # address
+  acceptSchedule: BigInt! # uint48
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DetailsLog @entity(immutable: true) {
+  id: Bytes!
+  internal_id: Bytes! # bytes32
+  provider: Bytes! # address
+  timestamp: BigInt! # uint40
+  url: String! # string
+  description: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProvDetailsLog @entity(immutable: true) {
+  id: Bytes!
+  provider: Bytes! # address
+  timestamp: BigInt! # uint40
+  description: String! # string
+  company: String! # string
+  url: String! # string
+  domain: String! # string
+  email: String! # string
+  misc: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RoleAdminChanged @entity(immutable: true) {
+  id: Bytes!
+  role: Bytes! # bytes32
+  previousAdminRole: Bytes! # bytes32
+  newAdminRole: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RoleGranted @entity(immutable: true) {
+  id: Bytes!
+  role: Bytes! # bytes32
+  account: Bytes! # address
+  sender: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RoleRevoked @entity(immutable: true) {
+  id: Bytes!
+  role: Bytes! # bytes32
+  account: Bytes! # address
+  sender: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type SubLog @entity(immutable: true) {
+  id: Bytes!
+  internal_id: Bytes! # bytes32
+  provider: Bytes! # address
+  subscriber: Bytes! # address
+  timestamp: BigInt! # uint40
+  amount: BigInt! # uint256
+  token: Bytes! # address
+  subScriptEvent: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UList @entity(immutable: true) {
+  id: Bytes!
+  timestamp: BigInt! # uint40
+  internal_id: Bytes! # bytes32
+  subscriber: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
