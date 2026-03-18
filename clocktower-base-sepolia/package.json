@@ -10,9 +10,19 @@
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 clocktower-base-sepolia",
     "test": "graph test"
   },
+  "overrides": {
+    "minimatch": ">=10.2.3",
+     "immutable": ">=5.1.5",
+     "@isaacs/brace-expansion": ">=5.0.1",
+     "ejs": ">=3.1.10",
+     "semver": ">=7.5.2",
+     "axios": ">=0.30.3",
+     "cross-spawn": ">=7.0.5",
+      "undici": ">=7.24.0"
+  },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.98.1",
-    "@graphprotocol/graph-ts": "0.38.1"
+    "@graphprotocol/graph-ts": "0.38.2"
   },
   "devDependencies": { "matchstick-as": "0.6.0" }
 }
